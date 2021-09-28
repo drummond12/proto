@@ -17,6 +17,12 @@
         To login find the Case and Account number on the letter you have received.
       </p>
 
+     
+{{ govukWarningText({
+  text: "Invalid case number and/or account number",
+  iconFallbackText: "Warning"
+}) }} 
+
 <form class= "form" action= "checkinput" method="post">     
 
 {{ govukInput({
