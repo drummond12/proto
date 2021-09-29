@@ -7,8 +7,9 @@
 {% block content %}
 
 <p>
-  Your payment has been successful, below is you receipt
+  Your payment has been successful, below is you receipt.
 </p>
+
 <form class= "form" action= "index" method="post">  
   {{ govukButton({
     text: "Print"
@@ -62,6 +63,9 @@
   </div>
 </dl>
 
+<p>
+  You may now Exit this page.
+</p> 
 
 {{ govukButton({
   text: "Exit"

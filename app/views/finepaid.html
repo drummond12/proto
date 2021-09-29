@@ -17,6 +17,12 @@
         To login find the Case and Account number on the letter you have received.
       </p>
 
+     
+{{ govukWarningText({
+  text: "This fine has been paid already",
+  iconFallbackText: "Warning"
+}) }} 
+
 <form class= "form" action= "checkinput" method="post">     
 
 {{ govukInput({
@@ -48,13 +54,14 @@
 }) }}
 
 
-<h2 class="govuk-heading-m">About this page</h2>
- <p>This prototype was created using the GOV.UK prototype kit</p>
+      <h2 class="govuk-heading-m">About this page</h2>
+
+      <p>This prototype was created using the GOV.UK prototype kit</p>
 
       
 
       
+    </div>
   </div>
-</div>
 
 {% endblock %}
