@@ -1,0 +1,67 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Welcome to the online portal for payment of TV licence fee fines.
+        </h1>
+
+      <p>
+        To login find the Case and Account number on the letter you have received.
+      </p>
+
+     
+{{ govukWarningText({
+  text: "This fine has been paid",
+  iconFallbackText: "Warning"
+}) }} 
+
+<form class= "form" action= "checkinput" method="post">     
+
+{{ govukInput({
+  id: 'case number',
+  name:'case number',
+  value:[''],
+  classes:'',
+  label: {
+    text: "Enter case number",
+    classes: "govuk-label--l",
+    isPageHeading: false
+  }
+}) }}
+
+{{ govukInput({
+  id: 'Account number',
+  name:'Account number',
+  value:[''],
+  classes:'',
+  label: {
+    text: "Enter account number",
+    classes: "govuk-label--l",
+    isPageHeading: false
+  }
+}) }}
+
+{{ govukButton({
+  text: "Next"
+}) }}
+
+
+      <h2 class="govuk-heading-m">About this page</h2>
+
+      <p>This prototype was created using the GOV.UK prototype kit</p>
+
+      
+
+      
+    </div>
+  </div>
+
+{% endblock %}
