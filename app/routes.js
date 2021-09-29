@@ -6,7 +6,7 @@ let Divisions = ["48095961","93926077","91990106","28955127","00725231"];
 let AccountNumbers = ["08006811","08006812","08006813","08006814","08006815"];
 let Settled = [false,false,false,true,true];
 
-// use this to populate fine info page
+// use this to populate fine info page, currently not implemented
 let Addresss = ["123 Fake Street","124 Fake Street","125 Fake Street","126 Fake Street","127 Fake Street"];
 let Names = ["John Smith","Mary Archer","Jim Bean","Jack Daniels","Ally cord"];
 let FineAmounts = [1000, 700, 400, 300, 200];
@@ -32,7 +32,7 @@ if (Divisions.includes(caseNum)  && AccountNumbers.includes(accountNum) && caseN
   if(Settled[accountNumPos] == false){
     res.redirect('FineInfo')
   }
-  //if fine has been paid, display medssage showing this
+  //if fine has been paid, display message showing this
     else{
       res.redirect('finepaid')
     }

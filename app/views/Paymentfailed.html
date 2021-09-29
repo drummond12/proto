@@ -7,10 +7,16 @@
 {% block content %}
 <form class= "form" action= "confirmation" method="post"> 
 
-  {{ govukWarningText({
-    text: "Payment was unsuccessful",
-    iconFallbackText: "Warning"
-  }) }} 
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Payment was unsuccessful",
+      href: "#"
+    }
+    
+  ]
+}) }}
 
 
 

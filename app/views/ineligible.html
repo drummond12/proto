@@ -17,11 +17,9 @@
         To login find the Case and Account number on the letter you have received.
       </p>
 
-     
-{{ govukWarningText({
-  text: "Invalid case number and/or account number",
-  iconFallbackText: "Warning"
-}) }} 
+
+      
+
 
 <form class= "form" action= "checkinput" method="post">     
 
@@ -29,11 +27,14 @@
   id: 'case number',
   name:'case number',
   value:[''],
-  classes:'',
+  classes:'govuk-input govuk-input--width-10',
   label: {
     text: "Enter case number",
     classes: "govuk-label--l",
     isPageHeading: false
+  },
+  errorMessage: {
+    text: "Enter your 8 digit case number"
   }
 }) }}
 
@@ -41,11 +42,14 @@
   id: 'Account number',
   name:'Account number',
   value:[''],
-  classes:'',
+  classes:'govuk-input govuk-input--width-10',
   label: {
     text: "Enter account number",
     classes: "govuk-label--l",
     isPageHeading: false
+  },
+  errorMessage: {
+    text: "Enter your 8 digit account number"
   }
 }) }}
 
