@@ -2,8 +2,10 @@ const express = require('express')
 const router = express.Router()
 
 //use this to test login, valid login where fine needs paid, incorrect info given, and where the fine has already been paid
-let Divisions = ["48095961","93926077","91990106","28955127","00725231"];
-let AccountNumbers = ["08006811","08006812","08006813","08006814","08006815"];
+
+//changed to simple values for presentation
+let Divisions = ["56","93926077","91990106","28955127","12"];
+let AccountNumbers = ["78","08006812","08006813","08006814","34"];
 let Settled = [false,false,false,true,true];
 
 // use this to populate fine info page
