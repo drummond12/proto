@@ -5,7 +5,17 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
+
 {% block content %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -44,7 +54,7 @@
 }) }}
 
 {{ govukButton({
-  text: "Next"
+  text: "Sign in"
 }) }}
 
 
